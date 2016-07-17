@@ -108,6 +108,22 @@ final class BBALogistics {
             include_once( 'includes/class-bba-shipping-rules.php' );
         }
     }
+
+    /**
+     * Get the plugin path.
+     * @return string
+     */
+    public function plugin_path() {
+        return untrailingslashit( plugin_dir_path( __FILE__ ) );
+    }
+
+    /**
+     * Get the template path.
+     * @return string
+     */
+    public function template_path() {
+        return apply_filters( 'bbalogistics_template_path', 'bbalogistics/' );
+    }
 }
 
 endif;

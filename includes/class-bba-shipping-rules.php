@@ -38,4 +38,11 @@ class BBALogistics_Shipping_Rules extends WC_Shipping_Method {
     public function init_form_fields() {
         $this->form_fields = include( 'settings/bbalogistics-rules.php' );
     }
+
+    /**
+     * Generate country HTML.
+     */
+    public function generate_country_html( $key, $data ) {
+        return $this->generate_select_html( $key, $data );
+    }
 }
